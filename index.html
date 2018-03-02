@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html><head>
+<title>Kyleplo's Jekyll Site Builder</title>
+<style>html {font-family: Arial} button {background: white;padding: 5px}</style>
+</head><body>
+<h1>Kyleplo's Jekyll Site Builder [BETA]</h1>
+<p>Build a Jekyll site with little or no coding knowledge.</p>
+<button id="start">Create a website today!</button>
+<p style="font-size:8px">Requires a Github account</p>
+<script>
+function makeState() {
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (var i = 0; i < 10; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
+document.getElementById("start").addEventListener("click",function (){
+localStorage.authState = makeState();
+location.href = "https://github.com/login/oauth/authorize?client_id=<client-id>&redirect_uri=https://kyleplo.github.io/jekyll-site-builder/authed.html&scope=public_repo&state=" + localStorage.authState;
+document.body.innerHTML = "<p>Redirecting...</p>"
+});
+</script>
+</body></html>
