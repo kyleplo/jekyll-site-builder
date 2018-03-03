@@ -1,0 +1,45 @@
+<!DOCTYPE html><html>
+<head><title>Edit your Jekyll site</title>
+<style>html {font-family: Arial} input, select, button {padding: 10px;border-width: 3px} button {cursor: pointer} a {color: black;cursor: pointer} h2 {margin-top: 50px}</style>
+</head>
+<body>
+<div id="sidebar" style="position:fixed;top:0px;left:0px;height:100%;width:15%;min-width:100px;background: white;border-right:solid 3px black;padding: 10px">
+<h3>Jekyll Site Builder</h3>
+<a href="#dashboard" title="Manage your site's status such as comments and statistics.">Dashboard</a><br>
+<a href="#homepage" title="Edit your site's homepage or disable it and move blog to home.">Homepage</a><br>
+<a href="#nav" title="Control your site's navigation, footer and copyright.">Navigation</a><br>
+<a href="#theme" title="Import a theme from any public repository on Github and customise it.">Theme</a><br>
+<a href="#pages" title="Create and edit static pages on your website.">Pages</a><br>
+<a href="#posts" title="Post to your website's blog using Markdown.">Posts</a><br>
+<a href="#collections" title="Organize your static pages with collections.">Collections</a><hr>
+<a href="#includesdata" title="Quickly add HTML snippets to your entire website and edit site data.">Includes &amp; Data</a><br>
+<a href="#config" title="Change the settings in your site's config.yml file.">Config</a>
+<h3>Quick Options</h3>
+<a href="#posts-new">New post +</a><br>
+<a href="#pages-new">New page +</a><hr>
+<a href="https://you.github.io">View your public site</a><br>
+<a href="https://github.com/you/you.github.io">Edit your site on Github</a><br>
+</div>
+<div style="margin-left: 18%">
+<h1>Edit your Jekyll Site</h1>
+<h2 id="dashboard">Dashboard</h2>
+<h3 id="dashboard-comments">Comments</h3>
+<p>You will need to <a href="#config-comments">enable comments</a> if you haven't already to use this.</p>
+<ul id="dashboard-commentlist"></ul>
+<h3 id="dashboard-stats">Stats</h3>
+<p>Coming soon...</p>
+<h2 id="homepage">Homepage</h2>
+<button id="homepage-save">Save homepage options</button>
+<p><input type="check" id="homepage-homeenabled" checked> Enable homepage</p>
+<p>If you don't have a homepage, your blog will be your homepage. The settings below only apply if you have a homepage.</p>
+<h3 id="homepage-sections">Homepage Sections</h3>
+<p>Different themes show sections differently.</p>
+<button id="homepage-addsection">Add section</button>
+<ul id="homepage-sectionlist"></ul>
+<h3 id="homepage-inlcudes">Homepage Includes</h3>
+<input type="text" id="homepage-includelist">
+<p>Enter you include file names (with file extensions) seperated by commas. Default includes are:</p>
+<ul><li>spotlights.html - List of spotlights - <a href="includesdata-data-spotlights">Configure spotlights</a></li><li>.html - List of spotlights - <a href="includesdata-data-spotlights">Configure spotlights</a></li></ul>
+</div>
+</body>
+</html>
