@@ -19,7 +19,7 @@ function makeState() {
 }
 document.getElementById("start").addEventListener("click",function (){
 localStorage.authState = makeState();
-location.href = "https://github.com/login/oauth/authorize?client_id=<client-id>&redirect_uri=https://kyleplo.github.io/jekyll-site-builder/authed.html&scope=public_repo&state=" + localStorage.authState;
+location.href = "https://github.com/login/oauth/authorize?client_id=<client-id>&redirect_uri=https://kyleplo.com/jekyll-site-builder/authed.php&scope=public_repo&state=" + localStorage.authState;
 document.body.innerHTML = "<p>Redirecting...</p>"
 });
 </script>
