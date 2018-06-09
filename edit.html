@@ -5,7 +5,7 @@
 <body>
 <div id="sidebar" style="position:fixed;top:0px;left:0px;height:100%;width:15%;min-width:100px;background: white;border-right:solid 3px black;padding: 10px">
 <h3>Jekyll Site Builder</h3>
-<a href="#dashboard" title="Manage your site's status such as comments and statistics.">Dashboard</a><br>
+<a href="#dashboard" title="Manage your site's status such as comments and new blog posts.">Dashboard</a><br>
 <a href="#homepage" title="Edit your site's homepage or disable it and move blog to home.">Homepage</a><br>
 <a href="#nav" title="Control your site's navigation, footer and copyright.">Navigation</a><br>
 <a href="#theme" title="Import a theme from any public repository on Github and customise it.">Theme</a><br>
@@ -26,19 +26,13 @@
 <h3 id="dashboard-comments">Comments</h3>
 <p>You will need to <a href="#config-comments">enable comments</a> if you haven't already to use this.</p>
 <ul id="dashboard-commentlist"></ul>
-<h3 id="dashboard-stats">Stats</h3>
-<p>Coming soon...</p>
+<h3 id="dashboard-blog">Recent Posts</h3>
+ <ul id="dashboard-blogpostlist"></ul>
 <h2 id="homepage">Homepage</h2>
-<button id="homepage-save">Save homepage options</button>
-<p><input type="checkbox" id="homepage-homeenabled" checked> Enable homepage</p>
-<p>If you don't have a homepage, your blog will be your homepage. The settings below only apply if you have a homepage.</p>
-<h3 id="homepage-sections">Homepage Sections</h3>
+  <button id="homepage-save">Save homepage settings</button>
 <p>Different themes show sections differently.</p>
 <button id="homepage-addsection">Add section</button>
 <ul id="homepage-sectionlist"></ul>
-<h3 id="homepage-includes">Homepage Includes</h3>
-<input type="text" id="homepage-includelist">
-<p>Enter you include file names (with file extensions) seperated by commas.</p>
   <h2 id="nav">Navigation</h2>
   <button id="nav-save">Save navigation settings</button>
   <h3 id="nav-top">Top-nav</h3>
@@ -46,25 +40,16 @@
     <p>You can either have your (or your project's) name or your (or your project's) logo in your site's navigation.</p>
     <p>Enter the name you want or leave blank to use your <a href="#config-favicon">favicon</a> as your logo.</p>
     <input type="text" id="nav-top-logo-text">
-   <h4 id="nav-top-pages">Pages</h4>
-    <input type="radio" name="nav-top-pages-options"> Hide pages from navigation
-    <input type="radio" name="nav-top-pages-options" checked> Show all static pages in navigation
-    <input type="radio" name="nav-top-pages-options"> Group pages in a "Pages" folder
-    <h4 id="nav-top-search">Search</h4>
-    <input type="checkbox" id="nav-top-search-enabled" checked> Show searchbar in top navigation. Look may vary in different themes.
   <h3 id="nav-footer">Footer</h3>
-   <h4 id="nav-footer-social">Social Icons</h4>
-  <p>You can edit your social profiles <a href="#includesdata-data-footer">in this .yml file</a></p>
-  <input type="checkbox" id="nav-footer-link" checked> Include a link to your homepage
-  <input type="checkbox" id="nav-footer-shareicon" checked> Show a share button
-   <h4 id="nav-footer-share">Share button<h4>
      <p>If you <a href="#nav-footer-social">enable it</a>, you can have a share button that has buttons to share on Facebook, Twitter and Google+ as well as print and bookmark the page.</p>
-     <input type="checkbox" id="nav-footer-download"> Show a button to download the page's HTML
-     <h4 id="nav-footer-copyright">Copyright &amp; Credits</h4>
-     <input type="checkbox" id="nav-footer-copyright-enabled"> Show a copyright icon with your name in the footer. The year will auto-update.
-     <p>You can provide a credits statement in the footer.</p>
-     <input type="text" id="nav-footer-copyright-text">
+     <h4 id="nav-footer-copyright">Copyright</h4>
+     <p>Enter a copyright name or leave blank to disabled. Will look like &copy; [year] [name]</p>
+     <input type="text" id="nav-footer-copyright-name">
      <h2 id="theme">Theme</h2>
+  <p>Your theme can be loaded from anywhere on Github. The default theme is "kyleplo/jekyll-site-builder-theme".</p>
+  <input type="text" id="theme-link" placeholder="user/repo">
+  <h3 id="theme-colors">Theme Colors</h3>
+  <p>You can edit your theme colors in <a>this file</a>. Not all themes have theme colors.</p>
 </div>
 </body>
 </html>
